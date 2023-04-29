@@ -16,6 +16,9 @@ public class LoginPage extends BasePage{
 
     @FindBy(css = ".shopping_cart_link")
     WebElement Cart;
+    @FindBy(css = "h3[data-test='error']")
+    WebElement Eror1;
+
 
     public LoginPage(ChromeDriver driver) {
         this.driver = driver;
@@ -38,6 +41,7 @@ public class LoginPage extends BasePage{
         UserName.sendKeys("Dejan");
     }
 
+
     public void EnterInwalidPassword() {
         Password.sendKeys("123456789456");
     }
@@ -45,4 +49,8 @@ public class LoginPage extends BasePage{
         UserName.sendKeys("");
         Password.sendKeys("");
     }
+    public String ErorMessage1(){
+        return Eror1.getText();
+    }
+
 }
