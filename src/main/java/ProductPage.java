@@ -4,7 +4,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProductPage extends BasePage{
-    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    @FindBy(name = "add-to-cart-sauce-labs-backpack")
     WebElement BackPack;
     @FindBy(id = "add-to-cart-sauce-labs-bolt-t-shirt")
     WebElement TShirt;
